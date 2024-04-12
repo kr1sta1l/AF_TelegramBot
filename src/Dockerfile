@@ -3,17 +3,14 @@ LABEL authors="kr1sta1l"
 
 COPY src/ /app/src/
 
-#WORKDIR /app
 WORKDIR /app
 
 ENV PYTHONPATH=/app
 
-# ! add requirements.txt to thif directory because COPY can't copy files from parent directory
 RUN pip install --no-cache-dir -r src/requirements.txt
 
 
 
-#ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ENTRYPOINT ["python", "src/main.py"]
 
 # to build the image:
