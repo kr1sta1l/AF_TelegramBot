@@ -1,0 +1,12 @@
+from enum import Enum
+
+
+class TgUsersStates(Enum):
+    EMAIL_ENTER = 0
+    CODE_ENTER = 1
+    MAIN_MENU = 100
+    FRIEND_LIST_MAIN = 200
+    EDIT_PROFILE = 300
+    EDIT_PROFILE_ADDRESS = 301
+    EDIT_PROFILE_BUILDING = 302
+    EDIT_PROFILE_FILTERS = 303
